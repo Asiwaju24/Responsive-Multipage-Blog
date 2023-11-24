@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Web App</title>
+</head>
+<body>
+    <nav class="nbr">
+        <div class="container nav_container">
+           <a href="Index.html" class="home"><img src="Image/bulb.jpg" width="50px"></a>
+        </div>
+         <img src="menu.svg" id="open_nav-btn">
+        
+      <ul class="nav_items">
+                  <img src="close.png" id="close_nav-btn" class="bt" width="20px">
+              
+        <li><a href="blog.html">Blog</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Sign In.html">Sign In</a></li>
+                <li class="nav_profile">
+                    <div class="avatar">
+                        <img class="photo" src="Image/user 1.jpg">
+                        <ul class="board">
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="log out.html">Log Out</a></li>
+                     </ul>
+                    </div>
+                </li>
+      </ul>
+      
+    </nav>
+  
+  <section class="dashboard">
+    <div class="container dashboard_container">
+      <div class="sidebar_toggle">
+     <img id="show_sidebar-btn" src="visible.png" width="25px">
+    <img id="hide_sidebar-btn" src="hide.png" width="25px">
+    </div>
+      <aside>
+        <ul>
+          <li><a href="add post.html"><h5>Add Post</h5></a></li>
+          <li><a href=""><h5>Manage Post</h5></a></li>
+          <li><a href="add user.html"><h5>Add User</h5></a></li>
+          <li><a href="dashboard.html"><h5>Manage Users</h5></a></li>
+          <li><a href="Add categories.html"><h5>Add Categories</h5></a></li>
+          <li><a href="manage category.html"><h5>Manage Categories</h5></a></li>
+        </ul>
+      </aside>
+        
+      <main>
+        <table>
+          <h1>Manage Posts</h1>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tr>
+            <td> Lorem ipsum</td>
+            <td>Travel</td>
+            <td><a href="" class="btn sn">Edit</a></td>
+             <td><a href="" class="btn sn danger">Delete</a></td>
+          </tr>
+          <tr>
+            <td>  Lorem ipsum</td>
+            <td>Food</td>
+            <td><a href="" class="btn sn">Edit</a></td>
+             <td><a href="" class="btn sn danger">Delete</a></td>
+          </tr>
+          <tr>
+            <td>  Lorem ipsum dolor</td>
+            <td>Science&Technology</td>
+            <td><a href="" class="btn sn">Edit</a></td>
+             <td><a href="" class="btn sn danger">Delete</a></td>
+          </tr>
+        </table>
+      </main>
+    </div>
+  </section>
+   
+   <!--Footer-->
+  
+  <footer>
+    <div class="footer_socials">
+      <a href="" target="_blink"><img src="YouTube.png" width="25px"></a>
+      <a href="" target="_blink"><img src="Facebook.png" width="25px"></a>
+      <a href="" target="_blink"><img src="x.png" width="25px"><a>
+      <a href="" target="_blink"><img src="Instagram.png" width="25px"></a>
+    </div>
+        <div class="container footer_container">
+          <article>
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="">Business</a></li>
+              <li><a href="">Art</a></li>
+              <li><a href="">Wild Life</a></li>
+              <li><a href="">Music</a></li>
+              <li><a href="">Travel</a></li>
+              <li><a href="">Science & Technology</a></li>
+              <li><a href="">Food</a></li>
+            </ul>
+          </article>
+          
+            <article>
+            <h4>Donate</h4>
+            <ul>
+              <li><a href="">Online Support</a></li>
+              <li><a href="">Call Number</a></li>
+              <li><a href="">Social Media </a></li>
+              <li><a href="">Location</a></li>
+              
+            </ul>
+          </article>
+          
+            <article>
+            <h4>Blog</h4>
+            <ul>
+              <li><a href="">Popular</a></li>
+              <li><a href="">New</a></li>
+              <li><a href="">Categories</a></li>
+              <li><a href="">Repair</a></li>
+             
+            </ul>
+          </article>
+          
+            <article>
+            <h4>Permalinks</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </article>
+        </div>
+        <div class="footer_copyright">
+          <small>Copyright &copy; 2023 Asiwaju Blog</small>
+        </div>
+  </footer>
+      
+ 
+      <script>
+      const navItems= document.querySelector(".nav_items");
+      const openNavBtn= document.querySelector("#open_nav-btn");
+      const closeNavBtn= document.querySelector("#close_nav-btn");
+
+       const openNav=() =>{
+    navItems.style.display="grid";
+    openNavBtn.style.display="none";
+         closeNavBtn.style.display="block"
+}
+      const closeNav=() =>{
+    navItems.style.display="none";
+        openNavBtn.style.display="flex";
+    closeNavBtn.style.display="none";
+}
+      
+
+openNavBtn.addEventListener('click', openNav);
+closeNavBtn.addEventListener('click', closeNav);
+
+      
+      const sidebar = document.querySelector("aside");
+      const showSidebarBtn = document.querySelector("#show_sidebar-btn");
+      const hideSidebarBtn = document.querySelector("#hide_sidebar-btn");
+      
+      const showSidebar = ()=>{
+        sidebar.style.left="0";
+        showSidebarBtn.style.display="none";
+        hideSidebarBtn.style.display="inline-block";
+      }
+      const hideSidebar =()=>{
+        sidebar.style.left="100%";
+        showSidebarBtn.style.display="inline-block";
+        hideSidebarBtn.style.display="none";
+      }
+      
+      showSidebarBtn.addEventListener("click",showSidebar);
+      hideSidebarBtn.addEventListener("click",hideSidebar);
+      </script>
+</body>
+</html

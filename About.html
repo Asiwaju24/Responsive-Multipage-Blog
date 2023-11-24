@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Web App</title>
+</head>
+<body>
+    <nav class="nbr">
+        <div class="container nav_container">
+           <a href="Index.html" class="home"><img src="Image/bulb.jpg" width="50px"></a>
+        </div>
+         <img src="menu.svg" id="open_nav-btn">
+   
+      <ul class="nav_items">
+            <img src="close.png" id="close_nav-btn" class="bt" width="20px">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Sign In.html">Sign In</a></li>
+                <li class="nav_profile">
+                    <div class="avatar">
+                        <img class="photo" src="Image/user 1.jpg">
+                        <ul class="board">
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="log out.html">Log Out</a></li>
+                     </ul>
+                    </div>
+                </li>
+      </ul>
+      
+    </nav>
+  
+   
+  <!--About-->
+  <section class="empty_page">
+    <h1>About Us Page</h1>
+  </section>
+  
+  <!---category-button--->
+  <section class="category_button">
+    <div class="container button_container">
+      <a href="" class="category_button">Category</a>
+        <a href="" class="category_button">Wild Life</a>
+        <a href="" class="category_button">Travel</a>
+        <a href="" class="category_button">Art</a>
+        <a href="" class="category_button">Science & Technology</a>
+        <a href="" class="category_button">Food</a>
+        <a href="" class="category_button">Music</a>
+    </div>
+  </section>
+  
+  <!--Footer-->
+  
+  <footer>
+    <div class="footer_socials">
+      <a href="" target="_blink"><img src="YouTube.png" width="25px"></a>
+      <a href="" target="_blink"><img src="Facebook.png" width="25px"></a>
+      <a href="" target="_blink"><img src="x.png" width="25px"><a>
+      <a href="" target="_blink"><img src="Instagram.png" width="25px"></a>
+    </div>
+        <div class="container footer_container">
+          <article>
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="">Business</a></li>
+              <li><a href="">Art</a></li>
+              <li><a href="">Wild Life</a></li>
+              <li><a href="">Music</a></li>
+              <li><a href="">Travel</a></li>
+              <li><a href="">Science & Technology</a></li>
+              <li><a href="">Food</a></li>
+            </ul>
+          </article>
+          
+            <article>
+            <h4>Donate</h4>
+            <ul>
+              <li><a href="">Online Support</a></li>
+              <li><a href="">Call Number</a></li>
+              <li><a href="">Social Media </a></li>
+              <li><a href="">Location</a></li>
+              
+            </ul>
+          </article>
+          
+            <article>
+            <h4>Blog</h4>
+            <ul>
+              <li><a href="">Popular</a></li>
+              <li><a href="">New</a></li>
+              <li><a href="">Categories</a></li>
+              <li><a href="">Repair</a></li>
+             
+            </ul>
+          </article>
+          
+            <article>
+            <h4>Permalinks</h4>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </article>
+        </div>
+        <div class="footer_copyright">
+          <small>Copyright &copy; 2023 Asiwaju Blog</small>
+        </div>
+  </footer>
+      
+       
+      <script>
+      const navItems= document.querySelector(".nav_items");
+      const openNavBtn= document.querySelector("#open_nav-btn");
+      const closeNavBtn= document.querySelector("#close_nav-btn");
+
+       const openNav=() =>{
+    navItems.style.display="grid";
+    openNavBtn.style.display="none";
+         closeNavBtn.style.display="flex"
+}
+      const closeNav=() =>{
+    navItems.style.display="none";
+        openNavBtn.style.display="flex";
+    closeNavBtn.style.display="none";
+}
+      
+
+openNavBtn.addEventListener('click', openNav);
+closeNavBtn.addEventListener('click', closeNav);
+
+      </script>
+</body>
+</html>
